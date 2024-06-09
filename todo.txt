@@ -1,0 +1,26 @@
+
+0. Git and Github: Done 
+
+    We will use github to share our code
+
+1. Make a folder just for this project
+
+2. Download vscode
+    https://code.visualstudio.com/
+
+    Vscode is a powerful IDE
+
+    Open the folder you made in vscode
+
+3. Download the data from Kaggle into this folder
+
+    It's in a "zip" file
+
+    Unzip the file (zip is a way to compress files, can just double click)
+
+
+4. Follow the Video or just the website to get openai going 
+
+5. Try to solve some of the math problems 
+
+6. Try to solve some of them using AI
