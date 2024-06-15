@@ -3,24 +3,26 @@
 
     We will use github to share our code
 
-1. Make a folder just for this project
+1. Make a folder just for this project: Done
 
-2. Download vscode
+2. Download vscode :Done
     https://code.visualstudio.com/
 
     Vscode is a powerful IDE
 
     Open the folder you made in vscode
 
-3. Download the data from Kaggle into this folder
+3. Download the data from Kaggle into this folder: Done
 
     It's in a "zip" file
 
     Unzip the file (zip is a way to compress files, can just double click)
 
 
-4. Follow the Video or just the website to get openai going 
+4. Follow the Video or just the website to get openai going : In Progress
 
-5. Try to solve some of the math problems 
+5. Try to solve some of the math problems : TODO
 
-6. Try to solve some of them using AI
+6. Try to solve some of them using AI : TODO
+
+7. Decide if you like the Olympiad Problems or choose anything else. : TODO

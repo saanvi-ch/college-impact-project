@@ -1,0 +1,13 @@
+
+Git Commands 
+
+git add . 
+git commit -m "your message"
+git push origin main 
+
+
+Pip 
+
+to install a package:
+
+pip3 install package_name

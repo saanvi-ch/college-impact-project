@@ -1,0 +1,550 @@
+Solve this problem:
+
+Let $k, l > 0$ be parameters. The parabola $y = kx^2 - 2kx + l$ intersects the line $y = 4$ at two points $A$ and $B$. These points are distance 6 apart. What is the sum of the squares of the distances from $A$ and $B$ to the origin?
+
+Ansewer:
+To solve the problem, we start by setting up the equations based on the given information.
+
+First, we know the parabola 
+y
+=
+k
+x
+2
+−
+2
+k
+x
++
+l
+y=kx 
+2
+ −2kx+l intersects the line 
+y
+=
+4
+y=4 at points 
+A
+A and 
+B
+B. Therefore, we have:
+
+k
+x
+2
+−
+2
+k
+x
++
+l
+=
+4
+kx 
+2
+ −2kx+l=4
+which simplifies to:
+
+k
+x
+2
+−
+2
+k
+x
++
+(
+l
+−
+4
+)
+=
+0
+kx 
+2
+ −2kx+(l−4)=0
+Let the roots of this equation be 
+x
+1
+x 
+1
+​	
+  and 
+x
+2
+x 
+2
+​	
+ . Then, by Vieta's formulas, we have:
+
+x
+1
++
+x
+2
+=
+2
+k
+k
+=
+2
+and
+x
+1
+x
+2
+=
+l
+−
+4
+k
+x 
+1
+​	
+ +x 
+2
+​	
+ = 
+k
+2k
+​	
+ =2andx 
+1
+​	
+ x 
+2
+​	
+ = 
+k
+l−4
+​	
+ 
+Given that 
+A
+A and 
+B
+B are 6 units apart, we find:
+
+∣
+x
+1
+−
+x
+2
+∣
+=
+6
+∣x 
+1
+​	
+ −x 
+2
+​	
+ ∣=6
+Now, we need to find the sum of the squares of the distances from 
+A
+A and 
+B
+B to the origin. The distance from any point 
+(
+x
+,
+4
+)
+(x,4) on the line 
+y
+=
+4
+y=4 to the origin is given by 
+x
+2
++
+16
+x 
+2
+ +16
+​	
+ .
+
+Thus, the squares of the distances are:
+
+x
+1
+2
++
+16
+and
+x
+2
+2
++
+16
+x 
+1
+2
+​	
+ +16andx 
+2
+2
+​	
+ +16
+To find 
+x
+1
+2
++
+x
+2
+2
+x 
+1
+2
+​	
+ +x 
+2
+2
+​	
+ , we use the identity:
+
+x
+1
+2
++
+x
+2
+2
+=
+(
+x
+1
++
+x
+2
+)
+2
+−
+2
+x
+1
+x
+2
+=
+2
+2
+−
+2
+(
+l
+−
+4
+k
+)
+=
+4
+−
+2
+(
+l
+−
+4
+)
+k
+x 
+1
+2
+​	
+ +x 
+2
+2
+​	
+ =(x 
+1
+​	
+ +x 
+2
+​	
+ ) 
+2
+ −2x 
+1
+​	
+ x 
+2
+​	
+ =2 
+2
+ −2( 
+k
+l−4
+​	
+ )=4− 
+k
+2(l−4)
+​	
+ 
+Given 
+∣
+x
+1
+−
+x
+2
+∣
+=
+6
+∣x 
+1
+​	
+ −x 
+2
+​	
+ ∣=6, we square this to find:
+
+(
+x
+1
+−
+x
+2
+)
+2
+=
+36
+(x 
+1
+​	
+ −x 
+2
+​	
+ ) 
+2
+ =36
+Expanding 
+(
+x
+1
+−
+x
+2
+)
+2
+(x 
+1
+​	
+ −x 
+2
+​	
+ ) 
+2
+  gives us:
+
+x
+1
+2
+−
+2
+x
+1
+x
+2
++
+x
+2
+2
+=
+36
+x 
+1
+2
+​	
+ −2x 
+1
+​	
+ x 
+2
+​	
+ +x 
+2
+2
+​	
+ =36
+Adding 
+2
+x
+1
+x
+2
+2x 
+1
+​	
+ x 
+2
+​	
+  to both sides:
+
+x
+1
+2
++
+x
+2
+2
+=
+36
++
+2
+x
+1
+x
+2
+x 
+1
+2
+​	
+ +x 
+2
+2
+​	
+ =36+2x 
+1
+​	
+ x 
+2
+​	
+ 
+Substituting back the expression for 
+x
+1
+2
++
+x
+2
+2
+x 
+1
+2
+​	
+ +x 
+2
+2
+​	
+ :
+
+x
+1
+2
++
+x
+2
+2
+=
+36
++
+2
+(
+l
+−
+4
+)
+k
+x 
+1
+2
+​	
+ +x 
+2
+2
+​	
+ =36+ 
+k
+2(l−4)
+​	
+ 
+Thus, the sum of the squares of the distances from 
+A
+A and 
+B
+B to the origin is:
+
+(
+x
+1
+2
++
+16
+)
++
+(
+x
+2
+2
++
+16
+)
+=
+x
+1
+2
++
+x
+2
+2
++
+32
+=
+36
++
+2
+(
+l
+−
+4
+)
+k
++
+32
+=
+68
++
+2
+(
+l
+−
+4
+)
+k
+(x 
+1
+2
+​	
+ +16)+(x 
+2
+2
+​	
+ +16)=x 
+1
+2
+​	
+ +x 
+2
+2
+​	
+ +32=36+ 
+k
+2(l−4)
+​	
+ +32=68+ 
+k
+2(l−4)
+​	
+ 
+Therefore, the answer is 
+68
+68
+​	
+ .
+
+
+Analysis:
+
+First off, answer is wrong. Looking at it, the mistake occurs...
