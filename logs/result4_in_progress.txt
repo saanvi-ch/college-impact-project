@@ -1,0 +1,5 @@
+Solve this problem:
+What is the minimum value of $5x^2+5y^2-8xy$ when $x$ and $y$ range over all real numbers such that $|x-2y| + |y-2x| = 40$?
+
+Answer:
+
