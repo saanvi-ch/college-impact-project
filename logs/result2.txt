@@ -1,5 +1,5 @@
 Solve this problem:
-    Each of the three-digits numbers $111$ to $999$ is coloured blue or yellow in such a way that the sum of any two (not necessarily different) yellow numbers is equal to a blue number. What is the maximum possible number of yellow numbers there can be?
+Each of the three-digits numbers $111$ to $999$ is coloured blue or yellow in such a way that the sum of any two (not necessarily different) yellow numbers is equal to a blue number. What is the maximum possible number of yellow numbers there can be?
 
 Answer:
 
@@ -24,6 +24,8 @@ Step 3: Strategy
         Solution Approach: We need to find a set of yellow numbers such that the sums of any two yellow numbers are all distinct blue numbers within the range.
 
 After a systematic consideration and analysis, the maximum number of yellow numbers that satisfy the condition is found to be 10. This is achieved by carefully selecting yellow numbers such that their sums yield distinct blue numbers covering the range from 111 to 1998.
+
+Comments:
 
 This is the incorrect answer. ChatGPT mistook the range to be 111 to 1998, and then somehow got the answer to be 10 without explanation.
 

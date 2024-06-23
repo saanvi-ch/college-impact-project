@@ -1,5 +1,5 @@
 Solve this problem:
-  Let $k, l > 0$ be parameters. The parabola $y = kx^2 - 2kx + l$ intersects the line $y = 4$ at two points $A$ and $B$. These points are distance 6 apart. What is the sum of the squares of the distances from $A$ and $B$ to the origin?
+Let $k, l > 0$ be parameters. The parabola $y = kx^2 - 2kx + l$ intersects the line $y = 4$ at two points $A$ and $B$. These points are distance 6 apart. What is the sum of the squares of the distances from $A$ and $B$ to the origin?
 
 Answer:
 
@@ -22,6 +22,8 @@ Before the response pasted below, ChatGPT created equations for the roots of kx^
 
   Since the exact values of k and l are not provided and are not needed for finding OA^2 + OB^2, the sum of squares of the distances from A and B to the origin is directly related to the geometric properties of the problem:
   52
+
+Comments:
 
 This is the correct answer, but there's no explanation as to how it derived the answer from the formulas it created. If the sum and distance formulas are used to create a system of equations, the points A & B, and therefore the answer, can be found.
 

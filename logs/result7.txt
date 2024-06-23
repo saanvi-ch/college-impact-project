@@ -1,0 +1,39 @@
+Solve this problem:
+Suppose that we roll four 6-sided fair dice with faces numbered 1 to~6. Let $a/b$ be the probability that the highest roll is a 5, where $a$ and $b$ are relatively prime positive integers. Find $a + b$.
+
+Answer:
+
+To find the probability that the highest roll among four fair 6-sided dice is a 5, we need to count the favorable outcomes where at least one die shows a 5 as the highest roll.
+
+Step 1: Total Number of Outcomes
+Each die has 6 faces, so the total number of outcomes when rolling four dice is: 6^4 = 1296
+
+Step 2: Favorable Outcomes
+We will use the complementary counting method to find the number of outcomes where no die shows a 5 as the highest roll.
+Case Analysis:
+    Case 1:
+        No die shows a 5.
+        All dice show numbers from 1 to 4.
+        Each die has 4 possible outcomes.
+        The number of outcomes for this case: 4^4 = 256
+    Case 2: 
+        At least one die shows a 5.
+        Calculate this by subtracting the outcomes from Case 1 from the total outcomes: 1296 - 256 = 1040
+
+Step 3: Probability Calculation
+The probability that the highest roll is a 5 is the number of favorable outcomes divided by the total number of outcomes: 1040/1296​
+
+Step 4: Simplify the Fraction
+To simplify 1040/1296​, find the greatest common divisor of 1040 and 1296, which is 16: 65/81
+
+Step 5: Verify that 65 and 81 are Relatively Prime
+Since 65 and 81 have no common divisors other than 1, they are relatively prime.
+
+Step 6: Sum a+ba + ba+b
+We have a = 65 and b = 81. Therefore, a + b = 65 + 81 = 146​
+
+Comments:
+
+This answer is incorrect. ChatGPT incorrectly calculated the probability by not accounting for the fact that none of the rolls can result in the number 6.
+
+I solved this problem by finding the probability that all dice would roll a number 1-5 (5^4/6^4 = 625/1296) and the probability that all the dice would roll a number 1-4 (4^4/6^4 = 256/1296). Then I subtracted the second value from the first to get 369/1296, which becomes 41/144 when simplified. a + b = 185.
