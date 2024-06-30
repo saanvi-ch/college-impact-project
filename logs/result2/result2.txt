@@ -31,3 +31,31 @@ This is the incorrect answer. ChatGPT mistook the range to be 111 to 1998, and t
 
 The way I solved it was by automatically assigning all numbers from 500 to 999 to be blue because 2n > 999 for n >= 500. I then assigned the numbers 250 to 499 as yellow because their sums range from 500 to 898, so they're accounted for in the blue numbers. The other numbers (111 to 249) must be blue because their sums are yellow. Therefore, 250 is the maximum number of yeloow numbers.
 This method should work for any set of numbers, but I couldn't come up with a formula.
+
+Answer with gpt-4:
+
+    1. To start with, there are 889 three-digit numbers total: from 111 to 999 inclusive.
+
+    2. A key realization is that every blue number can be a sum of at most two unique yellow numbers. This is because if a blue number could be the sum of two sets of yellow numbers, then adding those sets of yellow numbers separately would have to give a blue number (because both are yellow sum), which contradicts the requirement that a yellow sum equals a blue number.
+
+    3. So for every blue number in our color partition, there must be at least 2 yellow numbers associated with it.
+
+    4. The question then becomes, how to partition the numbers between 111 and 999 into groups of one blue and two yellow numbers to maximize the number of yellow numbers. 
+
+    5. Since we want to maximize the number of yellow numbers, we want to minimize the number of blue numbers. To do this, we assign the smallest possible numbers we can to be blue.
+
+    6. Because we must be able to add two yellow numbers to get a blue, and because all our numbers are ≥ 111, the smallest possible blue number is 222 (111 + 111). The next smallest possible blue number is 223 (111 + 112), then 224 (111 + 113 or 112 + 112), etc. This way we can ensure that every new blue number we add is associated with two (unique) new yellow numbers.
+
+    7. As such, the blue numbers would be 222, 223, ..., 999. This is a total of 999 - 222 + 1 = 778 blue numbers.
+
+    8. Because these blue numbers are supplemented by two yellow numbers each, there are 2 * 778 = 1556 yellow numbers.
+
+    9. However, this exceeds the total number of three-digit numbers. Thus, we need to recount considering the restriction that there are only 889 total numbers.
+
+    10. In the end there will be 111 blue numbers, from 889 to 999, and the remaining 889 - 111 = 778 numbers will be yellow.
+
+    So, the maximum possible number of yellow numbers is 778.
+
+Comments:
+
+This is the incorrect answer. There's no real explanation as to how it got the answer except saying that it recounted the numbers based on the restriction that there are 899 numbers.

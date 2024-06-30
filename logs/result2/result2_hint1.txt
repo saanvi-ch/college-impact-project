@@ -1,0 +1,22 @@
+model: gpt-4
+
+Prompt:
+
+Solve this problem:
+Each of the three-digits numbers $111$ to $999$ is coloured blue or yellow in such a way that the sum of any two (not necessarily different) yellow numbers is equal to a blue number. What is the maximum possible number of yellow numbers there can be?
+
+A well-known mathematician suggests first assigning the numbers $500$ to $999$ inclusive as blue numbers.
+
+Answer:
+
+The mathematician's suggestion to assign the numbers $500$ to $999$ as blue numbers certainly makes sense, as it gives a large range of possible sums. Any two yellow numbers must sum to a blue number. Since the largest possible sum of two three-digit numbers is $1998$, any number greater than this must be blue. Therefore, at least $499$ numbers must be blue.
+
+Then we consider the numbers $111$ to $499$. Any pair of these numbers has a sum that is at most $998 (499 + 499)$. Therefore, all of these numbers can be yellow. So, we can have a maximum of $499 - 111 + 1 = 389$ yellow numbers. 
+
+This is because yellow numbers are allowed to sum to each other as well as to blue numbers. For example, if we had four yellow numbers $a, b, c$, and $d$, and the sums $a+b, a+c, a+d, b+c, b+d, c+d$ were all yellow numbers or blue numbers, then all four could be yellow. So, unlike blue numbers, yellow numbers are not ruled out by being sums of other yellow numbers.
+
+So, the answer is $389$.
+
+Comments:
+
+This answer is incorrect. ChatGPT didn't consider that the numbers 111-249 can't be yellow because their sums wouldn't be blue.

@@ -29,3 +29,39 @@ This is the correct answer, but there's no explanation as to how it derived the 
 
 The way I solved it was by finding the x-value of the parabola's vertex by using the formula x = -b/2a, which gave me 1 for x. Because the points A & B on the line y = 4 must be equidistant from the line of symmetry (x = 1) I found the x values by adding/subtracting 3 from 1 because the distance between the points A & B is 6. This meant that the two points were (-2,4) & (4,4) so I could find the distances from the origin, square them, and add them to get 52.
 However, this only works if the line that the parabola intersects is horizontal.
+
+Answer with gpt-4:
+
+  We know that since the parabola and the line intersect at points A and B, the equation $kx^2 - 2kx + l = 4$ must be true for these two points' x-coordinates. By rearranging, we get $kx^2 - 2kx + l - 4 = 0$.
+
+  This is a quadratic equation, which we can write in the form $ax^2 + bx + c = 0$, where a = k, b = -2k, and c = l - 4. The solutions to a quadratic equation are given by the quadratic formula: $x = {-b \pm \sqrt{b^2 - 4ac}\over 2a}$. These solutions represent the x-coordinates of points A and B, which we will call $x_1$ and $x_2$. 
+
+  Given that the distance between A and B is 6, we know that abs($x_1 - x_2$) = 6.
+
+  By the quadratic equation, 
+
+  $x_1 - x_2 = \frac{-(-2k) + \sqrt{(-2k)^2-4k(l-4)}}{2k} - \frac{-(-2k) - \sqrt{(-2k)^2-4k(l-4)}}{2k} = \frac{\sqrt{4k^2-4k(l-4)}}{k} =  6$
+
+  Thus $4k^2-4k(l-4) = 36k^2$, or $l = 4 - 4k$. 
+
+  Substituting this result to original equation $y = kx^2 - 2kx + l = 4$, we obtain the standard form of a quadratic function $y = k(x^2 - 2x + (1 - k)) + 4$, which is also the form $y = k(x-1)^2 + 4k$.
+
+  For points A and B, the $y$ equals $4$, means the $x$ must be $1 \pm \sqrt{4 - 4k}$. So the squared distance from point A to the origin and from point B to the origin are: 
+
+  $A^2 = (1+\sqrt{4-4k})^2 + 4^2 = 1+4-4k+4\sqrt{4-4k}+16 = 21-4k+4\sqrt{4-4k}$ 
+
+  and 
+
+  $B^2 = (1-\sqrt{4-4k})^2 + 4^2 = 1+4-4k-4\sqrt{4-4k}+16 = 21-4k-4\sqrt{4-4k}$ 
+
+  respectively.
+
+  Adding both distances together:
+
+  $A^2 + B^2 = 2*(21-4k) = 42-8k$.
+
+  So the sum of the squares of the distances from A and B to the origin depends on the value of $k$, and equals $42-8k$.
+
+Comments:
+
+Here, ChatGPT found the answer in terms of k and didn't get the actual answer.

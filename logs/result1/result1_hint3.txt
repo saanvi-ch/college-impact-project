@@ -1,0 +1,42 @@
+model: gpt-4
+
+Prompt:
+
+Solve this problem:
+Let $k, l > 0$ be parameters. The parabola $y = kx^2 - 2kx + l$ intersects the line $y = 4$ at two points $A$ and $B$. These points are distance 6 apart. What is the sum of the squares of the distances from $A$ and $B$ to the origin?
+
+A well-known mathematician suggests finding points $A$ and $B$ without finding $k$ and $l$.
+
+Answer:
+
+Given that the line y = 4 intersects the parabola y = kx^2 - 2kx + l at two points A and B, let's set them equal to each other to solve for x.
+
+4 = kx^2 - 2kx + l
+=> kx^2 - 2kx + l - 4 = 0
+=> x^2 - 2x + (l - 4)/k = 0; .................................................................. [i]
+
+This is a quadratic equation and it has two roots which correspond to the x-coordinates of the two points A and B.
+
+Let's equate the standard form of the quadratic equation ax^2 + bx + c = 0 to [i], and it can be seen that 'a' is 1, 'b' is -2, and 'c' = (l - 4)/k.
+
+Now, the ((square of the) distance) of a point (x, y) from the origin is given by x² + y². Here the y-coordinate is 4 for both points A and B. Hence, the sum of the squares of the distances from A and B to the origin is
+
+(x₁² + 4²) + (x₂² + 4²) = x₁² + x₂² + 32, where x₁ and x₂ are two roots.
+
+In a quadratic equation, the sum of the squares of roots is given by (Sum of roots)² - 2*Product of roots.
+
+The sum of the roots is given by -b/a = 2 and product of the roots c/a = (l - 4)/k, hence their squares of distances is (2)² - 2*(l - 4)/k + 32.
+
+If they are 6 distance apart, then by the distance formula for real numbers, |x₂ - x₁| = 6.
+
+|x₂ - x₁| is given by √((Sum of roots)² - 4*Product of roots) = √(2^2 - 4*(l - 4)/k) = √(4 - 4*(l - 4)/k).
+
+So, 6 = √(4 - 4*(l - 4)/k) 
+=> x₂ - x₁ = √(4 - 4*(l - 4)/k) = √4 or = -√4.
+...
+Substituting l from [ii] in [i],
+We get x₁² + x₂² + 32 = 4² - 2*4 + 32 = 16 - 8 + 32 = 40.
+
+Therefore, the sum of the squares of the distances to the two points A and B from the origin is 40.
+
+Comments: ChatGPT got the wrong answer with this hint, but without a hint, it found the answer in terms of k (see result1.txt). It doesn't seem to find the vertex method of solving unless it's specifically instructed to find the vertex.

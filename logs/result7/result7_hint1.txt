@@ -1,0 +1,36 @@
+model: gpt-4
+
+Prompt:
+
+Solve this problem:
+Suppose that we roll four 6-sided fair dice with faces numbered 1 to~6. Let $a/b$ be the probability that the highest roll is a 5, where $a$ and $b$ are relatively prime positive integers. Find $a + b$.
+
+A well-known mathematician suggests following these steps:
+1. find the probability that all the dice will roll a number from 1 to 5.
+2. find the probability that all the dice will roll a number from 1 to 4.
+3. Subtract (2) from (1) to get $a/b$. simplify the fraction so that $a$ and $b$ are relatively prime.
+4. find $a + b$.
+
+Answer:
+
+To find the probability that all dice roll a number from 1 to 5, you consider that for each die there are 5 valid outcomes out of 6 total outcomes. Because the rolls of each die are independent, you calculate the combined probability by multiplying them:
+
+(5/6)^4 = 625/1296
+
+Next, to find the probability that all dice roll a number from 1 to 4, you use the same thinking, but this time there are only 4 valid outcomes for each die:
+
+(4/6)^4 = 256/1296 
+
+Now, to find the probability that the highest roll is a 5, you subtract the second probability from the first:
+
+625/1296 - 256/1296 = 369/1296
+
+However, 369 and 1296 are not relatively prime, as they share the common factors 3 and 123, so you simplify the fraction:
+
+369/1296 = 123/432 = 41/144
+
+And finally, to find a + b, you add the two remaining numbers:
+
+41 + 144 = 185.
+
+So 185 is your answer.

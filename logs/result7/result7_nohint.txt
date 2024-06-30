@@ -1,0 +1,28 @@
+model: gpt-4
+
+Prompt: 
+
+Solve this problem:
+Suppose that we roll four 6-sided fair dice with faces numbered 1 to~6. Let $a/b$ be the probability that the highest roll is a 5, where $a$ and $b$ are relatively prime positive integers. Find $a + b$.
+
+Comments:
+
+After trying out all the hints, I ran it without a hint again a couple times and got this or an answer where ChatGPT forgot to simplify the fraction so that a and b were relatively prime. However, before trying the hints, ChatGPT always returned the wrong answer.
+
+Answer:
+
+There are a total of $6^4$ possible outcomes when rolling four 6-sided dice because each of the four rolls has 6 possibilities.
+
+In order for the highest roll to be 5, all the dice must roll a 5 or less. This gives us $5^4$ possibilities.
+
+However, this includes the cases where the highest roll is 4 or less. To exclude these, we subtract the number of possibilities of rolling four dice all with a number 4 or less, which is $4^4$.
+
+Therefore, the probability that the highest roll is 5 is $(5^4 - 4^4) / 6^4$.
+
+To turn this into $a/b$ form, we simplify the fraction by cancelling powers of 2 as follows:
+
+$(5^4 - 4^4) / 2^4 * 3^4 = 625 - 256 / 16 * 81 = 369 / 16*81$.
+
+At this point, we simplify to get the final fraction, which will be relatively prime, as $369/1296 = 41/144$. 
+
+The problem now asks for $a + b$ so we add these two values together to get $41 + 144 = 185$. So, the answer is $\boxed{185}$.

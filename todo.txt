@@ -19,10 +19,10 @@
     Unzip the file (zip is a way to compress files, can just double click)
 
 
-4. Follow the Video or just the website to get openai going : In Progress
+4. Follow the Video or just the website to get openai going : Done
 
 5. Try to solve some of the math problems : TODO
 
 6. Try to solve some of them using AI : TODO
 
-7. Decide if you like the Olympiad Problems or choose anything else. : TODO
+7. Decide if you like the Olympiad Problems or choose anything else. : Done

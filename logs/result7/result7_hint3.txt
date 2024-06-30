@@ -1,0 +1,29 @@
+model: gpt-4
+
+Prompt:
+
+Solve this problem:
+Suppose that we roll four 6-sided fair dice with faces numbered 1 to~6. Let $a/b$ be the probability that the highest roll is a 5, where $a$ and $b$ are relatively prime positive integers. Find $a + b$.
+
+A well-known mathematician suggests finding the probabilities that the dice will all roll a certain range of numbers and then subtracting them.
+
+
+Answer:
+
+To find the probability that the highest roll is a 5, we approach as follows:
+
+The total number of outcomes when rolling four 6-sided fair dice is 6^4 or 1296.
+
+Next, you can consider the number of ways each die can roll between 5 and 1 delineating the maximum roll as 5. 
+
+There is exactly 1 way to get a 5 for a given die and 5 ways to get a number between 1 and 5 inclusive. Therefore, each die can roll in 5 ways out of 6, where the 5 is the maximum number rolled. Hence there are 5^4 or 625 distinct outcomes where the maximum roll is 5.
+
+However, the condition where the highest roll is 5, we must subtract out the cases where the maximum roll is 4. This would be having each die roll in 4 ways out of 6, where the number 4 is the maximum roll. Hence, there are 4^4 or 256 distinct outcomes where the maximum roll is 4.
+
+So the number of outcomes where the maximum roll is 5 is 625 - 256 = 369. 
+
+The probability that the highest roll is a 5 is then 369/1296 = 41/144, where 41 and 144 are relative primes.
+
+Finally, find a + b: 41 + 144 = 185. 
+
+So the solution to the problem is 185.

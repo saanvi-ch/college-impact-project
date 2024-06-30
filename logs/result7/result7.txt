@@ -37,3 +37,34 @@ Comments:
 This answer is incorrect. ChatGPT incorrectly calculated the probability by not accounting for the fact that none of the rolls can result in the number 6.
 
 I solved this problem by finding the probability that all dice would roll a number 1-5 (5^4/6^4 = 625/1296) and the probability that all the dice would roll a number 1-4 (4^4/6^4 = 256/1296). Then I subtracted the second value from the first to get 369/1296, which becomes 41/144 when simplified. a + b = 185.
+
+Answer with gpt-4:
+
+    To find the probability that the highest roll is a 5, we need to think about what possible outcomes can occur. 
+
+    We’ll break it down into cases based on how many dice rolled a 5.
+
+    1. One die rolled a 5:
+    The other three dice can roll any number from 1 to 4. So there are $5 * (4^3)$ ways for this to happen.
+
+    2. Two dice rolled a 5:
+    The other two dice can roll any number from 1 to 4. So there are ${4 \choose 2} * (4^2)$ ways for this to happen.
+
+    3. Three dice rolled a 5:
+    The other one die can roll any number from 1 to 4. So there are ${4 \choose 3} * 4$ ways for this to happen.
+
+    4. All four dice rolled a 5:
+    This can only happen in one way.
+
+
+    The total number of ways for all these cases to occur is $5 * (4^3) + {4 \choose 2} * (4^2) + {4 \choose 3} * 4 + 1 = 80 + 384 + 48 + 1 = 513$.
+
+    And the total number of possible outcomes when rolling four dice is $6^4 = 1296$.
+
+    Therefore, the probability the highest roll is a 5 is $513/1296$, but $513$ and $1296$ are not relatively prime. Dividing both the numerator and the denominator by their greatest common divisor, $3$, gives us the simplified fraction $171/432$.
+
+    Finally, asking for $a + b$, we get $171 + 432 = 603$.
+
+Comments:
+
+This answer is also calculated incorrectly.
