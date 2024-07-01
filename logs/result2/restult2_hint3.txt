@@ -1,0 +1,43 @@
+model: gpt-4
+
+Original Problem: 
+Each of the three-digits numbers $111$ to $999$ is coloured blue or yellow in such a way that the sum of any two (not necessarily different) yellow numbers is equal to a blue number. What is the maximum possible number of yellow numbers there can be?
+
+NOTE: The number 500-999 MUST be colored blue as the sum of any two numbers in that range will be greater than 999, which cannot be blue. 
+
+Let's see an example of a similar problem with 2-digit numbers.
+
+Example Problem:
+
+Each of the three-digits numbers $11$ to $99$ is coloured blue or yellow in such a way that the sum of any two (not necessarily different) yellow numbers is equal to a blue number. What is the maximum possible number of yellow numbers there can be?
+
+Solution:
+The number 50-99 MUST be colored blue as the sum of any two numbers in that range will be greater than 99, which cannot be blue.
+Thus 25-49 can be colored yellow, as if a and b are in this range, a+b is in the range 50-98, which is colored blue.
+The other numbers, 11-24, must be colored blue. To see this, note that for any a with 13 <= a <=24, we have 
+26 <= 2a  = a + a <= 48, so 2a is in the range 25-49, which is colored yellow. Thus these numbers must be colored blue.
+For 11 and 12, we see that 25 + 11 = 36 and 25 + 12 = 37, so these numbers must be colored blue as well, since 36 and 37
+are in the range 25-49, which is colored yellow.
+
+Now please provide your answer to the Original Problem.
+
+
+
+
+gpt-4 Answer:
+
+The logic for the original problem follows the same trend as the example problem. 
+
+For the numbers 500-999, they must all be colored blue as the sum of any two numbers in that range will be greater than 999, which cannot be blue. 
+
+Then, for the numbers 250-499, they can all be colored yellow since if a and b belong to this range, the sum a+b would fall in the range 500-998, which we have already colored blue. 
+
+The remaining numbers, 111-249, must be colored blue. To verify this for any number a in the range 131 <= a <= 248, we find that 262 <= 2a = a + a <= 496. Therefore, these sums fall within the range 250-499, which is all colored yellow, hence all numbers 131-249 must be colored blue.
+
+Now we'll look at numbers 111-130, we see that 250 + 111 = 361 and 250 + 130 = 380, both of these are within the range 361-380, which falls within the yellow range 250-499. Hence numbers 111-130 must be colored blue.
+
+Adding these up, we can determine the maximum possible number of yellow colored numbers. There are 999 - 111 + 1 = 889 total numbers. And the maximum possible number of yellow numbers will be 499 - 250 + 1 = 250.
+
+So, the solution to the original problem is 250. 
+
+Thus, the maximum possible number of yellow numbers in the range 111 to 999 is 250.
