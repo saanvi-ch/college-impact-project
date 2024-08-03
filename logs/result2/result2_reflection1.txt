@@ -1,0 +1,43 @@
+model: gpt-4
+
+
+prompt:
+
+Each of the three-digits numbers $111$ to $999$ is coloured blue or yellow in such a way that the sum of any two (not necessarily different) yellow numbers is equal to a blue number. What is the maximum possible number of yellow numbers there can be?
+Solve the problem, then review & edit it before revealing your final solution.
+
+
+solution:
+
+Okay, let's start by observing some patterns in this problem. 
+
+First, notice that if we have two specific yellow numbers whose sum is a blue number, we cannot have either of those yellow numbers appear as a blue number. This follows from the condition that the sum of any two yellow numbers must be a blue number, and if one of those yellow numbers was also blue, we could find two yellow numbers whose sum is yellow, contradicting the given condition.
+
+Let's consider a few possible scenarios:
+
+- If $n$ yellow numbers are consecutive (e.g: $n = 3$, for $111, 112, 113$), then the sums of all possible pairs within this group will also be consecutive ($222, 223, 224, 225$). This implies that the maximum number of blue numbers is less than the total number of sums we can make from pairs of yellow numbers, so we cannot color $n$ consecutive numbers yellow.
+
+- If yellow numbers are not consecutive, there is a possibility we can assign more yellow numbers than blue. 
+
+For example, let's suppose that we color every number that has a units digit of 1 or 2 yellow. 
+This gives us 180 yellow numbers (from $111$ to $991$ and $112$ to $992$). 
+When we add any two yellow numbers together, the units digit of the sum will be 2 or 4. 
+That means the blue numbers must include all numbers from $221$ to $994$ (inclusive) which have a units digit of either 2 or 4, giving us 160 blue numbers. 
+
+However, remember that we cannot have a yellow number that is also a blue number. So in the example above, the blue numbers include numbers like $221, 231, ..., 991$, and our yellow numbers include $111, 121, ..., 991$ and $112, 122, ..., 992$. 
+It's clear that between $221$ and $991$, there might be some numbers that are both yellow and blue which results in a contradiction.
+
+To prevent this kind of contradiction while maximizing yellow numbers, we can adjust our approach slightly. Let's color numbers that are congruent to 1 or 2 modulo 5 as yellow and the rest as blue. 
+
+Here is the logic behind this choice:
+
+1. The two classes (1,2 mod 5) provide the largest number of yellow numbers without overlapping sums.
+2. Any two yellow numbers summed will give a number that is congruent to 2 or 4 modulo 5, which doesn't overlap with original yellow numbers.
+3. This will guarantee our condition where the sum of any two yellow numbers must be a blue number.
+...
+So the maximum possible number of yellow numbers is 360.
+
+
+comments:
+
+ChatGPT went wrong first when it came to the conclusion that the yellow numbers can't be consecutive, and from there it made several other mistakes when solving the problem. As far as using reflection, I don't know what the original answer was, so I'll have it print the original answer next time so I can check for any improvement.

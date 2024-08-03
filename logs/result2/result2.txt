@@ -29,7 +29,7 @@ Comments:
 
 This is the incorrect answer. ChatGPT mistook the range to be 111 to 1998, and then somehow got the answer to be 10 without explanation.
 
-The way I solved it was by automatically assigning all numbers from 500 to 999 to be blue because 2n > 999 for n >= 500. I then assigned the numbers 250 to 499 as yellow because their sums range from 500 to 898, so they're accounted for in the blue numbers. The other numbers (111 to 249) must be blue because their sums are yellow. Therefore, 250 is the maximum number of yeloow numbers.
+The way I solved it was by automatically assigning all numbers from 500 to 999 to be blue because 2n > 999 for n >= 500. I then assigned the numbers 250 to 499 as yellow because their sums range from 500 to 998, so they're accounted for in the blue numbers. The other numbers (111 to 249) must be blue because their sums are yellow. Therefore, 250 is the maximum number of yeloow numbers.
 This method should work for any set of numbers, but I couldn't come up with a formula.
 
 Answer with gpt-4:
