@@ -26,3 +26,48 @@
 6. Try to solve some of them using AI : TODO
 
 7. Decide if you like the Olympiad Problems or choose anything else. : Done
+
+
+----- 
+
+Just a suggestion 
+
+1. Admin directs to planner 
+2. Planner creates an itemized gameplan
+3. Checker of the Plan, confirms a good gameplan
+4. Possibly repeat 1 and 2, until the checker confirms (MAKE SURE you have a limit on the number of back and forth)
+5. Now you have an itemized template for how to solve the problem 
+6. Now pass on the template to the mathematician/calculator
+7. Have them solve exactly one step at a time
+8. Checker checks the solution
+
+Example: Planner gives 
+step 1 
+step 2 
+step 3
+
+Caclulator gives 
+step 1:
+Solution 1
+
+step2:
+
+step3:
+
+Checker, checks
+
+Caclulator gives 
+step 1:
+Solution 1
+
+step2:
+Solution 2
+
+step3:
+
+Checker, checks
+
+
+9. Final Solution proposed 
+10. Another checker comes in and verifies 
+11. TERMINATE
