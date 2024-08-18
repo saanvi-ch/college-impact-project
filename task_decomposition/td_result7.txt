@@ -74,4 +74,6 @@ Great! The calculation has been verified and found correct. The sum of the numer
 
 comments:
 
-This is the correct answer.
+This is the correct answer. However, only the planner was actually needed to solve the problem, which is strange. When tested in a separate notebook with only the planner's prompt, it tried to solve the problem but failed. What's so specific about task task_decomposition that gets it to solve the problem, if only the planner is doing the work either way?
+
+So I ran this problem through task_decomposition again, only for it to get the wrong answer (and again, only the planner solved it, without taking help from the other agents). It gets the right method, but fails to simplify it again. More right than just the planner solving it, but still wrong.
