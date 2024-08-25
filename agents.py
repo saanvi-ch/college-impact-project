@@ -1,6 +1,6 @@
 from openai import OpenAI
 
-#planner prompts
+# planner prompts
 system_prompt_planner = """ 
 You are an expert at generating a sequence of steps for solving math problems. 
 """
@@ -47,7 +47,8 @@ Problem:
 Please provide your plan.
 """
 
-#planner agent
+
+# planner agent
 class Planner:
 
     def __init__(self):
@@ -65,7 +66,8 @@ class Planner:
         plan = completion.choices[0].message.content
         return plan
 
-#plan_checker prompts
+
+# plan_checker prompts
 system_prompt_plan_checker = """ 
 You are an expert at revising a generated sequence for solving a math problem. 
 """
@@ -117,7 +119,8 @@ For reference, this is the problem it's supposed to solve:
 If the existing plan is already perfect, reprint it.
 """
 
-#plan_checker agent
+
+# plan_checker agent
 class Plan_Checker:
 
     def __init__(self):
@@ -135,27 +138,23 @@ class Plan_Checker:
         new_plan = completion.choices[0].message.content
         return new_plan
 
-#plan_counter prompts
+
+# plan_counter prompts
 system_prompt_plan_counter = """ 
 You are an expert in counting the steps of a plan. 
 """
 
-prompt_for_plan_counter = """ 
-Please count the number of steps in this plan:
-{new_plan}
 
-Return ONLY the number of steps and NOTHING ELSE.
-RETURN ONE INTEGER. NOTHING ELSE.
-"""
-
-#plan_counter agent
+# plan_counter agent
 class Plan_Counter:
 
     def __init__(self):
         self.client = OpenAI()
+        with open("prompts/PlanCounter.txt", "r") as f:
+            self.prompt = f.read()
 
-    def ask(self,new_plan):
-        prompt = prompt_for_plan_counter.format(new_plan=new_plan)
+    def ask(self, new_plan):
+        prompt = self.prompt.format(new_plan=new_plan)
         completion = self.client.chat.completions.create(
             model="gpt-4",
             messages=[
@@ -167,8 +166,7 @@ class Plan_Counter:
         return x
 
 
-
-#mathematician prompts
+# mathematician prompts
 system_prompt_mathematician = """ 
 You are an expert mathematician who is seasoned at solving problems step-by-step and explaining your solutions. 
 """
@@ -178,16 +176,40 @@ Please solve step {i} in this plan: {new_plan}.
 For reference, the plan was created for this problem: {problem}
 
 ONLY SOLVE STEP {i}, NOTHING ELSE.
+
+Example 1: 
+
+
+Step 1: Recognize that the intersection points of the parabola $y = kx^2 - 2kx + l$ and the line $y = 4$ will be the solutions of the equation $kx^2 - 2kx + l = 4$.
+
+Step 2: Set up the equation $kx^2 - 2kx + l = 4$ and re-arrange it into a quadratic form $kx^2 - 2kx + (l-4) = 0$. 
+
+Step 3: Draw a sketch showing that the x-coordinates of point A and B are the roots of this quadratic equation (which can be found using the quadratic formula), and y-coordinate is always 4.
+
+Step 4: Notice that the difference in x-coordinates of A and B is equal to 6. Using the quadratic formula, this or the sum of roots can be written as the square root of (the square of the sum of roots minus 4 times the product of roots). Given the sum and product of roots for a quadratic equation, write this equation, replacing sum and product of roots.
+
+Step 5: Using the formula for the distance of a point from the origin, write an expression for the distances of A and B from the origin in terms of the roots of the quadratic equation.
+
+Step 6: Use the sum of the squares of these distances to obtain the required expression.
+
+Step 7: Plug in the information obtained from Step 4 into the expression for the sum of squares of distances from Step 6 to obtain the required result.
+
+Response: 
+
+7. 
 """
 
-#mathematician agent
+
+# mathematician agent
 class Mathematician:
 
     def __init__(self):
         self.client = OpenAI()
 
     def ask(self, problem, new_plan, i):
-        prompt = prompt_for_mathematician.format(problem=problem, new_plan=new_plan, i=i)
+        prompt = prompt_for_mathematician.format(
+            problem=problem, new_plan=new_plan, i=i
+        )
         completion = self.client.chat.completions.create(
             model="gpt-4",
             messages=[
@@ -198,7 +220,8 @@ class Mathematician:
         solution = completion.choices[0].message.content
         return solution
 
-#checker prompts
+
+# checker prompts
 system_prompt_checker = """ 
 You are an expert at checking a mathematician's solutions to make sure they're correct. 
 """
@@ -219,14 +242,18 @@ and we are trying to solve this problem overall:
 
 DON'T SOLVE THE ENTIRE PROBLEM. Only revise {solution}, which is the solution to step {i}. Depending on whether it's wrong or right, either print the revised solution or reprint the solution.
 """
-#checker agent
+
+
+# checker agent
 class Checker:
 
     def __init__(self):
         self.client = OpenAI()
 
     def ask(self, problem, solution, i, new_plan):
-        prompt = prompt_for_checker.format(problem=problem, solution=solution, i=i, new_plan=new_plan)
+        prompt = prompt_for_checker.format(
+            problem=problem, solution=solution, i=i, new_plan=new_plan
+        )
         completion = self.client.chat.completions.create(
             model="gpt-4",
             messages=[
@@ -237,7 +264,8 @@ class Checker:
         new_solution = completion.choices[0].message.content
         return new_solution
 
-#summarizer prompts
+
+# summarizer prompts
 system_prompt_summarizer = """ 
 You are an expert at solving math problems based on other mathematicians' work. 
 """
@@ -255,14 +283,18 @@ Provide the solution and a SHORT explanation.
 
 THE FINAL ANSWER MUST BE A SINGLE, POSITIVE INTEGER (NO EXPRESSIONS, VARIABLES, ETC.).
 """
-#summarizer agent
+
+
+# summarizer agent
 class Summarizer:
 
     def __init__(self):
         self.client = OpenAI()
 
     def ask(self, problem, new_solutions):
-        prompt = prompt_for_summarizer.format(problem=problem, new_solutions=new_solutions)
+        prompt = prompt_for_summarizer.format(
+            problem=problem, new_solutions=new_solutions
+        )
         completion = self.client.chat.completions.create(
             model="gpt-4",
             messages=[

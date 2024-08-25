@@ -1,0 +1,5 @@
+Please count the number of steps in this plan:
+{new_plan}
+
+Return ONLY the number of steps and NOTHING ELSE.
+RETURN ONE INTEGER. NOTHING ELSE.

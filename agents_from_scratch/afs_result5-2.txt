@@ -1,0 +1,33 @@
+From problem_5.py
+
+The five numbers in the geometric sequence are 2-digit integers, implying that the first term should be a relatively small number, otherwise the fifth term could easily exceed 99, violating the 2-digit only constraint.
+
+Starting with an initial guess of 1, we can incrementally increase it until a geometric sequence is found that satisfies the conditions.
+
+By the property of geometric sequences, each term is the preceding term multiplied by the common ratio. 
+
+For example, where 'a' is the first term and 'r' is the common ratio, the sequence a, ar, ar^2, ar^3, ar^4 should be composed of all integers, where the terms ar^3 and ar^4 should still be 2-digit numbers. 
+
+So we look for the smallest 'r' with 'a' starting from small numbers (say 5, 'r' starting from 2). Quickly, you will find that when a = 12 and r = 2, you get a sequence (12, 24, 48, 96) which are all 2-digit numbers and integers. But the 5th term would be 192 which is a three digit number. This implies that you have to look for 'r' which is less than 2. 
+
+Searching again from 'r' = 1.5, you will find that 'a' = 16 and 'r' = 1.5 yields a sequence (16, 24, 36, 54, 81) which comprises five 2-digit integers.
+
+So the sum of the sequence 16, 24, 36, 54, 81 is 16+24+36+54+81 = 211. 
+
+<scratch>
+
+...
+(1, 1.5, 2.25, 3.375, 5.0625)
+...
+(2, 3, 4.5, 6.75, 10.125)
+...
+(12, 24, 48, 96, 192)
+...
+(16, 24, 36, 54, 81)
+...
+
+16+24+36+54+81 = 211
+
+</scratch>
+
+So, the unique sum of the five 2-digit positive integers that form an increasing geometric sequence is 211.
