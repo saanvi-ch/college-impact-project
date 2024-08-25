@@ -1,0 +1,43 @@
+problem:
+
+    Let $k, l > 0$ be parameters. The parabola $y = kx^2 - 2kx + l$ intersects the line $y = 4$ at two points $A$ and $B$. These points are distance 6 apart. What is the sum of the squares of the distances from $A$ and $B$ to the origin?
+
+plan:
+
+    1. Step 1: Acknowledge that the intersection points A and B of the parabola $y = kx^2 - 2kx + l$ and the line $y = 4$ will be the solutions of the equation $kx^2 - 2kx + l = 4$.
+
+    2. Step 2: Formulate the equation $kx^2 - 2kx + l = 4$ and reconfigure it into a quadratic form, which is $kx^2 - 2kx + (l-4) = 0$. 
+
+    3. Step 3: Draw a diagram that illustrates that the x-coordinates of points A and B are the roots of the above quadratic equation (which can be determined by using the quadratic formula), and that the y-coordinate is consistently 4.
+
+    4. Step 4: Understand that the difference between the x-coordinates of points A and B is 6. Utilize the quadratic formula to express this difference as the square root of the square of the sum of the roots minus 4 times the product of roots. Replace the sum and product of roots using their formulas from the general quadratic equation.
+
+    5. Step 5: Utilize the formula for the distance between a point and the origin, $\sqrt{x^2+y^2}$, and generate an equation for the distances of points A and B from the origin in terms of the roots of the quadratic equation. 
+
+    6. Step 6: Use the expression obtained from step 5 to find the sum of the squares of the distances from points A and B to the origin.
+
+    7. Step 7: Substitute the information obtained from step 4 into the equation for the sum of the squares of distances that you obtained in step 6 to calculate the desired result.
+
+final solution:
+
+    Based on the work given, the steps to solve this problem are as follows:
+
+    Step 1: The intersection points of the parabola and the line satisfy the equation $kx^2 - 2kx + l = 4$. The solutions correspond to the x-coordinates of the intersection points.
+
+    Step 2: The equation is formulated into the quadratic form $kx^2 - 2kx + (l-4) = 0$.
+
+    Step 3: The x-coordinates of points A and B (points of intersection) are given by the quadratic formula $x = [2k ± sqrt((2k)^2-4k(l-4))]/(2k)$.
+
+    Step 4: We use the quadratic formula to derive an equation from the given information that the distance between the intersection points A and B is 6, leading to a quadratic equation:  $(2k)^2 -4k(l-4) = (6k)^2$.
+
+    Step 5 and Step 6: The distances from the origin to points A and B are found using the distance formula and led to the equation: $({r1}^2+ {r2}^2+ 32)$
+
+    Step 7: Here, instead of treating 'sum of roots' and 'product of roots' as variables, we substitute their values. The sum of roots is 2 (using -b/a = 2k/k) and the product of roots is (l-4)/k (using c/a = (l-4)/k) from the standard form of the quadratic equation ax^2 + bx + c = 0.
+
+    This gives us the sum of the squares of the distances from points A and B to the origin, our final answer (as a single positive integer).
+
+    Since we need to provide a single integer as the final answer, the problem is under-determined and can't be solved exactly. More information related to the values of $l$ and $k$ is needed.
+
+comments:
+
+    Unable to find the right answer. The plan seems to be right (though not the way I originally solved the problem), and the mathematician & checker seemed to have followed the steps correctly. However it was unable to get an integer solution (without that condition, it would have probably provided the answer in terms of k and l, like previous attempts).
