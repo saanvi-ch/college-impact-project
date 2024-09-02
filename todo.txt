@@ -71,3 +71,8 @@ Checker, checks
 9. Final Solution proposed 
 10. Another checker comes in and verifies 
 11. TERMINATE
+
+
+Nothing specific about problem  <-------->  Solve the problem in the prompt 
+
+Think of this as a scale from 1 - 10. 

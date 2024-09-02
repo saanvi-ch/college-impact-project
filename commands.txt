@@ -15,3 +15,6 @@ Pip
 to install a package:
 
 pip3 install package_name
+
+
+

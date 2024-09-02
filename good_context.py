@@ -1,5 +1,5 @@
 problem = """
-There exists a unique increasing geometric sequence of five 2-digit positive integers. What is their sum?
+Problem: There exists a unique increasing geometric sequence of five 2-digit positive integers. What is their sum?
 
 You can insert your scratch work as follows:
 
@@ -11,27 +11,28 @@ Final Response:
 
 Here is an example of a similar problem:
 
-There exists a unique increasing geometric sequence of six 3-digit positive integers. What is their sum?
+Problem: Let $k, l > 0$ be parameters. The parabola $y = kx^2 - 2kx + l$ intersects the line $y = 4$ at two points $A$ and $B$. These points are distance 6 apart. What is the sum of the squares of the distances from $A$ and $B$ to the origin?
 
 <scratch>
-A geometric sequence is given by a and r, via a, ar, ar^2, ar^3, ar^4, ar^5 ... 
-These must all be integers, which is a strong constraint.
-Let's first try a an integer and r an integer. 
-Well, our best try is a = 100 , r = 2. But this only gives us 100, 200, 400, 800, 1600, 3200.
-This fails as 1600 is not a 3-digit number.
+We can try the quadratic formula to find the x-coordinates of the points of intersection.
+The quadratic formula gives 
+x = (2k ± sqrt(4k^2 - 4k(l-4)))/2k = 1 ± sqrt(1 + l/k - 1) = 1 ± sqrt(l/k), 
+which seems to complex to deal with. Let's try to find a simpler way
 
-However, we may try r to be a non-integer, say a rational number p/q. This requires that 
-a is divisible by q^5. It makes sense to try q = 2, as this is the smallest possible value.
+The points are distance 6 apart, but also are on the same horizontal line. This means that the 
+x-coordinates are distance six apart. Furthermore, this mean the x-coordinate of the vertex 
+of the parabola is the midpoint of the x-coordinates of A and B. But we know the vertex of the
+parabola is where the derivative is zero. So we can find the vertex by taking the derivative of
+the parabola and setting it equal to zero. This gives us the x-coordinate of the vertex, via
+the formula $x = 1$. 
 
-Doing so gives us a = 128, r = 3/2, giving us 128, 192, 288, 432, 648, 972. 
+So, now we know the x-coordinate of the vertex is 1. Thus the x-coordinates of A and B are -2 and 4. 
+So the points of A and B are (-2, 4) and (4, 4). 
 
-Summing these gives us 128 + 192 + 288 + 432 + 648 + 972 =  2660.
+Now using the distance formula, we can find the distance of A and B from the origin, we find
+the distance of A from the origin is sqrt(20) and the distance of B from the origin is sqrt(32).
+So the sum of the squares of the distances from A and B to the origin is 20 + 32 = 52.
 </scratch>
-
-Final Response: Thus the answer is 2660.
-
-Now please solve the original problem.
-
 """
 
 system_prompt = "You are an expert mathematician."
