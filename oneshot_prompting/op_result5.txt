@@ -1,0 +1,81 @@
+** see oneshot_prompting.ipynb for example problem
+
+problem: There exists a unique increasing geometric sequence of five 2-digit positive integers. What is their sum?
+
+
+solution:
+
+Problem Constraints:
+1) The sequence needs to be comprised of five 2-digit numbers.
+2) The sequence will be geometric, meaning each term is a multiple of the previous term.
+3) The sequence must be increasing, meaning that the common ratio must be greater than 1.
+
+<scratch>
+Assuming the first term in the sequence as 'A' and the common ratio as 'r', the five-term sequence will look like:
+A, Ar, Ar^2, Ar^3, Ar^4
+
+Since they are 2-digit numbers,
+10 ≤ A ≤ 99
+10 ≤ Ar ≤ 99   
+10 ≤ Ar^2 ≤ 99  
+10 ≤ Ar^3 ≤ 99  
+10 ≤ Ar^4 ≤ 99  
+
+For the sequence to be of five increasing numbers, 'A' should be the smallest and Ar^4 should be the largest.
+So, 10 ≤ A ≤ 99 and 10 ≤ Ar^4 ≤ 99
+
+By taking the fourth root of each side in the second inequality:
+10^(1/4) ≤ Ar ≤ 99^(1/4)
+
+We know that 3 < 99^(1/4) < 4,
+So, the common ratio 'r' lies between 3/A and 4/A. 
+
+For 'r' to be an integer,
+A = 1, r = 3 OR A = 1, r = 4
+Since 'A' cannot be a 1-digit number,
+
+A ≠ 1, so r ≠ 3 or 4,
+Thus, there's no 2-digit integer value for common ratio 'r'. 
+
+This means, the assertion that such a sequence exists is incorrect. 
+
+</scratch>
+
+Final Response: There exists no such unique increasing geometric sequence of five 2-digit positive integers.
+
+
+comments:
+
+The  issue with this solution is that it assumes that r has to be an integer, even though that's not listed in the problem's constraints. However, I ran it a couple more times, and on the third time, it have me the right answer (see solution 2).
+
+
+solution 2:
+
+Problem Constraints for a unique increasing geometric sequence of five 2-digit positive integers:
+1) The common ratio of the sequence must be greater than 1 because it's an increasing sequence.
+2) All the terms must be 2-digit positive integers (from 10 to 99).
+
+<scratch>
+A geometric sequence or progression is a sequence of numbers where each term after the first is found by multiplying the previous term by a fixed, non-zero number called the common ratio.
+
+The nth term of a geometric sequence is given by:
+a * r^(n-1)
+where
+a = the first term,
+r = the common ratio, and
+n = the term number.
+
+For this problem, r > 1 (since it's an increasing sequence) and a must make all five terms fall within the two-digit range (10-99).
+
+By trying some small 2-digit numbers for a, it's clear that a = 12 and r = 2 sets up a sequence such that: 
+12, 24, 48, 96 are within the 2-digit range, but the next number (96*2=192) is not.
+
+It seems the problem won't have a solution with a common ratio of 2 due to it quickly exceeding the two-digit numbers. We thus need a common ratio less than 2.
+
+After some trial and error, it can be noticed that if we choose a = 16, and r = 3/2 (1.5), the sequence successfully stays within the 2-digit range for five terms.
+
+Turns out, the sequence is:
+16, 24, 36, 54, 81
+</scratch>
+
+Final Response: The sum of this sequence is 16 + 24 + 36 + 54 + 81 = 211.

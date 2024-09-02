@@ -1,0 +1,40 @@
+** see oneshot_prompting.ipynb for example problem
+
+problem: Suppose that we roll four 6-sided fair dice with faces numbered 1 to~6. Let $a/b$ be the probability that the highest roll is a 5, where $a$ and $b$ are relatively prime positive integers. Find $a + b$.
+
+
+solution:
+
+Problem Constraints:
+1) We are rolling four 6-sided fair dice, so all four rolls have equal probability.
+2) We are asked to find the probability that the highest roll is a 5 (not a 6).
+3) We need the answer as a relatively prime fraction in the form $a/b$ and the sum of $a$ and $b$.
+4) The dice rolls are discrete and independent events. 
+
+<scratch>
+To calculate this probability, we need to find two things: 
+1) The total number of possible outcomes.
+2) The number of outcomes where the highest number rolled is a 5.
+
+1) Since we are rolling four dice, each of which has 6 different outcomes, the total number of possible outcomes stands at
+$6^4 = 1296$.
+
+2) For the outcomes where the highest number is 5, we consider that each of the four dice can roll a number from 1 to 5. Thus, the total number of these outcomes is:
+$5^4 = 625$.
+
+Therefore, the probability that the highest number rolled is a 5 is 
+$p= \frac{625}{1296}$.
+
+However, this is not in lowest terms. We find the greatest common divisor (GCD) of 625 and 1296 to simplify it.
+
+The GCD of 625 and 1296 is 1 (they are relatively prime), so our fraction is already in simplest form.
+
+So, a = 625 and b = 1296.
+</scratch>
+
+Final Response: $a + b = 625 + 1296 = 1921$
+
+
+comments:
+
+This is incorrect because it takes into account the probability that all the numbers are less than six but not the probability that all the numbers are less than 5 (which should be subtracted from the previous probability). When I ran this again, it got closer once (with the right method but the rounding was wrong), but it never got the right answer.

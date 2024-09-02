@@ -1,0 +1,35 @@
+** see oneshot_prompting.ipynb for example problem
+
+problem: What is the minimum value of $5x^2+5y^2-8xy$ when $x$ and $y$ range over all real numbers such that $|x-2y| + |y-2x| = 40$?
+
+
+solution:
+
+Problem Constraints:
+1) The expression we want to minimize is $5x^2+5y^2-8xy$.
+2) The condition given is $|x-2y|+|y-2x|=40$, which indicates that we have an absolute value equation.
+
+<scratch>
+First, let's solve the constraint $|x-2y| + |y-2x| = 40$.
+There are two cases:
+1) $x - 2y + y - 2x = -40$, which simplifies to $-x - y = -40$ => $x + y = 40$
+2) $x - 2y - y + 2x = 40$, which simplifies to $2x - y = 40$ => $x - 0.5y = 20$.
+
+Let's plug these cases back into the expression we want to minimize $5x^2+5y^2-8xy$, giving two equations, one for each case:
+
+Case 1) $5(40-y)^2+5y^2-8(40-y)y$, this simplifies to $6000 - 2800y + 10y^2$.
+Case 2) $5(20+0.5y)^2+5y^2-8(20+0.5y)y$, this simplifies into $4000 - 3200y + 20y^2$.
+
+Now, let's minimize these equations. To find the minimum of a given quadratic function, you need to find its vertex. The x-coordinate of the vertex of a function of the form $f(x) = ax^2 + bx + c$ is given by $-b/2a$.
+
+For Case 1) $6000 - 2800y + 10y^2$, the y-coordinate of the vertex is $(2800)/(2*10) = 140$. Substituting y = 140 back into the equation gives the minimum value as $6000 - 2800(140) + 10(140)^2 = 2000$.
+For Case 2) $4000 - 3200y + 20y^2$, the y-coordinate of the vertex is $(3200)/(2*20) = 80$. Substituting y = 80 back into the equation gives the minimum value as $4000 - 3200(80) + 20(80)^2 = 0$.
+
+</scratch>
+
+Final Response: The minimum value of the function with the given constraint is 0.
+
+
+comments:
+
+It got this problem consistently wrong when I ran it five times. In result 6, for example, it got different but similar wrong answers evey time, but for this one, it got the exact same wrong answer.

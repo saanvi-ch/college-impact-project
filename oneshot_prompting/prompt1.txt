@@ -1,0 +1,56 @@
+Solve this problem: [problem]
+
+You can insert your scratch work as follows:
+
+Problem Constraints:
+1)
+2)
+and so on...
+
+<scratch>
+
+</scratch>
+
+Final Response: 
+
+
+Here is an example of how to solve a problem:
+
+EXAMPLE PROBLEM: Let $k, l > 0$ be parameters. The parabola $y = kx^2 - 2kx + l$ intersects the line $y = 4$ at two points $A$ and $B$. These points are distance 6 apart. What is the sum of the squares of the distances from $A$ and $B$ to the origin?
+
+EXAMPLE SOLUTION:
+Problem Constraints:
+1) The equation for the parabola is $y = kx^2 - 2kx + l$ so it must be a vertical parabola.
+2) The parabola intersects with horizontal line $y = 4$.
+3) The points $A$ and $B$ are 6 units apart. 
+4)
+5)
+
+<scratch>
+We can first rewrite the equation of the parabola by setting $y$ equal to $4$ because the parabola intersects with the line $y = 4$:
+$kx^2 - 2kx + l = 4$
+$kx^2 - 2kx + (l - 4) = 0$
+
+If the two intersection points are $(x1, y1)$ and $(x2, y2)$, we know that the distances from the origin $O$ to each point $A$ and $B$ are as follows:
+$OA = √((x1 - 0)^2 + (4 - 0)^2) = √(x1^2 + 16)$
+$OB = √((x2 - 0)^2 + (4 - 0)^2) = √(x2^2 + 16)$
+
+We also know that the distance between points $A$ and $B$ is $6$. Because this is a vertical parabola intersecting with a horizontal line, we know that points $A$ and $B$ must be equidistant from the vertex of the parabola, which means that they are each $3$ units away from the x-value of the vertex.
+We can find the x-value of the vertex with the formula $-b/2a$ for the standard equation $kx^2 - 2kx + (l - 4) = 0$. We get:
+$(2k)/(2k) = 1$
+
+Now that we know the x-value of the vertex of the parabola is $1$, we can find $x1$ and $x2$ by adding or subtracting $3$ from $1$. We get $-2$ and $4$ for $x1$ and $x2$, and $y1$ and $y2$ must be $4$ because they are on the line $y = 4$, so points $A$ and $B$ are:
+$A = (-2, 4)$
+$B = (4, 4)$
+
+Using the formulas for distance $OA$ and $OB$ we derived earlier, we get:
+$OA = √((-2)^2 + 16) = √20$
+$OB = √(4^2 + 16)$ = √32$
+
+Lastly, we add the squares of these distances to get:
+$(√20)^2 + (√32)^2 = 20 + 32 = 52$
+</scratch>
+
+Final Response: 52
+
+Now please solve the original problem.
