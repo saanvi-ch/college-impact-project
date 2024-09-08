@@ -1,0 +1,31 @@
+prompt:
+
+Please solve this problem and explain the solution: Suppose that we roll four 6-sided fair dice with faces numbered 1 to~6. Let $a/b$ be the probability that the highest roll is a 5, where $a$ and $b$ are relatively prime positive integers. Find $a + b$.
+
+Here is a python dictionary that provides examples of how to solve similar problems:
+{help7}
+The keys are the questions and the values are the solutions.
+
+
+solution:
+
+Here's how you solve it
+
+The total possible outcomes which are the sequences of outcomes of throwing four, 6-sided dice are $6^4 = 1296$. 
+
+To find out the events favorable to the condition that the highest roll is 5, we consider what options we have for each die if the highest roll is a 5. This means that each die can only roll a 1, 2, 3, 4, or 5, so we have 5 options for each of the four dice, giving us a total of $5^4 = 625$ events where the highest roll is a 5.
+
+However, this also includes the cases where the highest roll is less than 5 (i.e., 4) which we need to exclude. Similar to the above reasoning, if the highest roll is a 4, then each of the four dice has 4 possibilities, giving us a total of $4^4 = 256$ such events.
+
+So the number of events where the highest roll is exactly 5 is given by $625 - 256 = 369$.
+
+Therefore, the probability that the highest roll is a 5 is given by $a/b = 369/1296$, where $a$ and $b$ are to be expressed in simplest form.
+
+Since $369 = 3^2*41$ and $1296 = 2^4*3^4$, by dividing top and bottom by $3^2$ we get the fraction in simplest form as $41/144$.
+
+So the answer is $a + b = 41 + 144 = 185$.
+
+
+comments:
+
+This is the correct answer.
