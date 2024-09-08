@@ -9,7 +9,7 @@ class Chatbot:
         self.client = OpenAI()
         self.model_name = model
         self.system_prompt = system_prompt
-        self.temperature = 0
+        self.temperature = 0.2
         self.message_history.append({"role": "system", "content": self.system_prompt})
 
     def query(self, content):
