@@ -1,0 +1,68 @@
+
+This is supplemental with your Google Docs Outline. 
+
+Results Section 
+
+Possible Cases:
+
+(MMLU)
+
+1. Simple Prompt
+2. Prompt with 1 example
+3. Promt with 5examples 
+4. Prompt with scratch work place
+5. Prompt with 5 examples and scratch work place
+6. Reflection
+7. Any other prompt??
+8. Pick best one and compare to gpt-4o?
+
+Gather your resuls from the Olympiad problems 
+
+- What worked, for which problems 
+- Simple Prompting 
+- The above methods
+- autogen -> Finnicky (support with the deeplearning.ai blog)
+- reflection (somewhat well, but sometimes one shot was equivalent)
+- Common Mistakes LLM made (computation, confidently reporting wrong answer)
+    - geometric progression problem : non-integer solutions 
+- Combinatorics problem very hard (speculate as to why?)
+- And whatever else??
+
+You will need plenty of references:
+
+
+Olympiad Data:
+- You may want to explore and see how other teams did.
+
+https://www.kaggle.com/competitions/ai-mathematical-olympiad-prize/overview
+
+MMLU Data Set: 
+
+https://arxiv.org/pdf/2009.03300
+https://github.com/hendrycks/test
+
+Hendrycks D., Burns C., Basart S., Zou A., Mazeika M., Song D., Steinhardt J.  Measuring Massive Multitask Language Understanding. In: Proceedings of the International Conference on Learning Representations (ICLR), (2021).
+
+
+GPT-4 Technical Report:
+
+https://arxiv.org/pdf/2303.08774
+
+OpenAI, GPT-4 Technical Report. Preprint arxiv:2303.08774. 1-100 (2023).
+
+Chain of Thought:
+
+https://arxiv.org/abs/2201.11903
+
+K-shot prompting:
+
+https://arxiv.org/abs/2005.14165
+
+Autogen:
+
+https://github.com/microsoft/autogen
+
+
+Gemini Paper:
+
+https://arxiv.org/pdf/2312.11805
